@@ -17,5 +17,5 @@ void JudgeCore::Process(const int argc, const char* const* argv)
     std::cout << "compiler job done, return to Core." << std::endl;
 
     auto res = _runner.Process(_parameters);
-    std::cout<< "Runner finished, return to Core."<<std::endl;
+    std::cout << "Runner finished, return to Core." << std::endl;
 }

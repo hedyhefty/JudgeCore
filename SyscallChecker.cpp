@@ -15,17 +15,17 @@ bool SyscallChecker::IsSyscallValid(Language l, int syscallId, pid_t child, user
 
     if(table.count(syscallId) == 0)
     {
-        std::cout<<"Invalid syscall: "<<syscallId<<std::endl;
+        std::cout << "Invalid syscall: " << syscallId << std::endl;
         return false;
     }
     else if(table[syscallId] > 0 && !_inSyscall)
     {
-        std::cout<<"limited syscall: "<<syscallId<<std::endl;
+        std::cout << "limited syscall: " << syscallId << std::endl;
         --table[syscallId];
         return true;
     }
 
-    std::cout<<"permitted syscall: "<<syscallId<<std::endl;
+    std::cout << "permitted syscall: " << syscallId << std::endl;
     return true;
 }
 

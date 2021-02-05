@@ -213,17 +213,17 @@ void Runner::SetLimit()
 
 void Runner::IoRedirection()
 {
-    std::cout << "Redirect IO of run process" <<std::endl;
+    std::cout << "Redirect IO of run process" << std::endl;
 
     auto inFilePath = _par.runDir + "/" + util::INPUT_FILE_NAME;
     auto outFilePath = _par.runDir + "/" + util::OUTPUT_FILE_NAME;
 
-    stdin = freopen(inFilePath.c_str(),"r",stdin);
-    stdout = freopen(outFilePath.c_str(),"w",stdout);
+    stdin = freopen(inFilePath.c_str(), "r", stdin);
+    stdout = freopen(outFilePath.c_str(), "w", stdout);
 
     if(!stdin || !stdout)
     {
-        std::cerr<<"error while redirecting io: "<<stdin<<", "<<stdout<<std::endl;
+        std::cerr << "error while redirecting io: " << stdin << ", " << stdout << std::endl;
         std::exit(exitcode::EXIT_UNKNOWN);
     }
 }

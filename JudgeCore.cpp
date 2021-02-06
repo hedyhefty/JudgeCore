@@ -18,4 +18,19 @@ void JudgeCore::Process(const int argc, const char* const* argv)
 
     auto res = _runner.Process(_parameters);
     std::cout << "Runner finished, return to Core." << std::endl;
+    if(res != JudgeResult::None)
+    {
+        std::cout << "Judge finished after run, judge result: " << static_cast<int>(res) << std::endl;
+        return;
+    }
+
+    res = _judger.Judge(_parameters);
+    if(res == JudgeResult::AC)
+    {
+        std::cout << "congratulations, your answer got AC" << std::endl;
+    }
+    else if(res == JudgeResult::WA)
+    {
+        std::cout << "Wrong answer" << std::endl;
+    }
 }

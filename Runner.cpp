@@ -215,7 +215,7 @@ void Runner::IoRedirection()
 {
     std::cout << "Redirect IO of run process" << std::endl;
 
-    auto inFilePath = _par.runDir + "/" + util::INPUT_FILE_NAME;
+    auto inFilePath = _par.runDir + "/" + _par.inputFileName;
     auto outFilePath = _par.runDir + "/" + util::OUTPUT_FILE_NAME;
 
     stdin = freopen(inFilePath.c_str(), "r", stdin);

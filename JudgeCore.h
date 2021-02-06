@@ -13,6 +13,9 @@ public:
     void Process(const int argc, const char* const* argv);
 
 private:
+    void PrepareWorkspace();
+
+private:
     Parser _parser;
     Parameter _parameters;
     Compiler _compiler;

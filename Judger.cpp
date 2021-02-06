@@ -14,7 +14,8 @@ Judger::Judger()
 JudgeResult Judger::Judge(Parameter par)
 {
     std::string ansPath = par.runDir + "/" + util::OUTPUT_FILE_NAME;
-    if(IsAnswerIdentical(ansPath, "ans/answer"))
+    std::string gtPath = util::GROUND_TRUE_PATH + "/" + par.groundTrueFileName;
+    if(IsAnswerIdentical(ansPath, gtPath))
     {
         return JudgeResult::AC;
     }

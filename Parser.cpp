@@ -24,12 +24,20 @@ Parameter Parser::ParseArgs(const int argc, const char* const* argv)
         {
             p.lang = static_cast<Language>(std::stoi(parameter));
         }
+        else if(flag == "-i")
+        {
+            p.inputFileName = parameter;
+        }
+        else if(flag == "-a")
+        {
+            p.groundTrueFileName = parameter;
+        }
     }
 
     if(p.srcPath.empty() || p.runDir.empty() || p.lang == Language::UnSet)
     {
         std::cerr << "Parser error" << std::endl;
-        exit(-1);
+        exit(exitcode::EXIT_BAD_PARAM);
     }
 
     return p;

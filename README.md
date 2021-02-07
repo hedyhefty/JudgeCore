@@ -10,10 +10,10 @@ Easy to understand/manage judge core for online judge system (under process)
 
 mkdir for
 
-* holding test src file
-* work place(for running compiled src file)
-* input directory for placeing question test case(the input for e.g. std::cin)
-* ground truth answer directory for placing the standard answer of the test case.
+* SRC_DIR: a place to hold test src file
+* RUN_DIR: work place(for running compiled src file)
+* INPUT_DIR: input directory to place the question test case(the input for e.g. std::cin)
+* STD_ANSWER_DIR: ground truth answer directory to place the standard answer of the test case.
 
 run:
 

@@ -1,4 +1,4 @@
-Easy to understand/manage judge core for online judge system (under process)
+Easy to understand/manage judge core for online judge system (currently only support C/C++)
 
 ## compile:
 
